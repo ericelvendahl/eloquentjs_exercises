@@ -14,6 +14,7 @@ const countChars = (str, letter) => {
   return letterCount;
 };
 
+//same thing but with some higher-order function fun
 const countCharsCool = (str, letter) => {
   return str.split("").filter((x) => x === letter).length;
 };

@@ -2,12 +2,12 @@
 function arrayToList(arr) {
   let list = null;
   for (let i = arr.length - 1; i >= 0; i--) {
-    console.log(i);
     list = { value: arr[i], rest: list };
   }
+  console.log(list);
   return list;
 }
-let x = arrayToList([5, 2, 1, 4]);
+let x = arrayToList([1, 5]);
 console.log(x);
 
 //Also write a listToArray function that produces an array from a list.

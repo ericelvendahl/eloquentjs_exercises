@@ -9,10 +9,11 @@ let reverseArray = (arr) => {
 let reverseArrayInPlace = (arr) => {
   let newArray = [];
   let tempElement = "";
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
     tempElement = arr[i];
-    arr[i] = arr[arr.length - i];
-    arr[arr.length - i] = tempElement;
+    console.log(tempElement);
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - i - 1] = tempElement;
   }
   return arr;
 };
@@ -26,6 +27,8 @@ console.log(myArrayHolder);
 // → ["C", "B", "A"];
 
 let arrayValue = [1, 2, 3, 4, 5];
-console.log(`This is reverseArrayInPlace: ${reverseArrayInPlace(arrayValue)}`);
 console.log(arrayValue);
+let tempResult = reverseArrayInPlace(arrayValue);
+console.log(tempResult);
+
 // → [5, 4, 3, 2, 1]
